@@ -1,5 +1,5 @@
 FROM quay.io/gauravkumar9130/ubuntu-git
-RUN ap-get update -y && apt-get install apache2 -y 
+RUN apt-get update -y && apt-get install apache2 -y 
 COPY index.html /var/www/html/
 ENTRYPOINT service  apache2 start && /bin/bash
  
